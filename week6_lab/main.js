@@ -51,3 +51,12 @@ $(document).on("click", "#add-item", function() {
 
     list.append("<li>" + "<input type='checkbox' class = 'complete-item'>"+itemInput.val() + " <button class='delete-item'>X</button></li>");
 });
+
+$(document).on("click", ".complete-item", function(){
+    if ($(this).is(':checked')){
+        $(this).parent().css("text-decoration", "line-through");
+    }
+    else {
+        $(this).parent().css("text-decoration", "none");
+    }
+});
