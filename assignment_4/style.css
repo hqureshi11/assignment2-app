@@ -41,7 +41,7 @@ p {
 
 
 
-/*********** COLUMNS ************/
+/*********** BODY ************/
 #wrap {
     width:100%;
     margin:0 auto;
@@ -66,11 +66,20 @@ p {
 
 #gallery_cols {
     flex: 50%;
+    padding-left: 30px;
+    text-align: center;
 }
 
 h3 {
     color: darkgrey;
     text-align: center;
+}
+
+h2 {
+    padding-left: 100px;
+    padding-top: 50px;
+    color: darkgrey;
+    font-size: xx-large;
 }
 
 
@@ -104,4 +113,10 @@ button {
 
 a:hover {
     font-style: italic;
+}
+
+#description {
+    padding-top: 200px;
+    padding-left: 100px;
+    padding-right: 300px;
 }
