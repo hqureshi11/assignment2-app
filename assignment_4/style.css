@@ -1,5 +1,5 @@
 
-
+/*edits options for the body*/
 body {
     margin: 0;
     color: gainsboro;
@@ -7,6 +7,7 @@ body {
 }
 
 /*********** HEADER ************/
+/*creates options for the menu otions*/
 header {
     text-align: right;
     padding: 10px;
@@ -15,8 +16,10 @@ header {
     font-family: 'Trebuchet MS', sans-serif;
 }
 
+/**/
 header a {
-    padding: 0;
+    padding-right: 50px;
+    padding-top: 5px;
     margin: 0;
     overflow: hidden;
     display: inline-block;
@@ -25,14 +28,15 @@ header a {
     text-align: right;
 }
 
+/*removes hyperlink appearances*/
 link {
     text-decoration: none;
 }
-
+/*aligns the logo*/
 h1 {
     text-align: left;
 }
-
+/*provides continuity for all text blocks*/
 p {
     color: darkgrey;
     font-size: small;
@@ -42,11 +46,13 @@ p {
 
 
 /*********** BODY ************/
+/*provides options for setting up columns so they fit the browser size*/
 #wrap {
     width:100%;
     margin:0 auto;
 }
 
+/*left column will always take up 30%*/
 #left_col {
     padding: 20px;
     text-align: center;
@@ -54,35 +60,36 @@ p {
     width:30%;
 }
 
+/*right column will take 60%, leaving 10% for white space*/
 #right_col {
     float:right;
     width:60%;
 }
 
+/*aligns all images in a row*/
 #gallery_rows {
     display: flex;
     flex-wrap: wrap;
 }
-
+/*aligns all images in a column*/
 #gallery_cols {
     flex: 50%;
     padding-left: 30px;
     text-align: center;
 }
-
+/*centers and colorizes heading*/
 h3 {
     color: darkgrey;
     text-align: center;
 }
-
+/*allows product titles to stand out*/
 h2 {
     padding-left: 100px;
     padding-top: 50px;
     color: darkgrey;
     font-size: xx-large;
 }
-
-
+/*consistency for buttons*/
 button {
     background-color: darkgrey;
     border: none;
@@ -92,16 +99,16 @@ button {
     display: inline-block;
     padding: 16px 32px;
 }
-
+/*pushes images*/
 #images {
     padding-left: 100px;
 }
-
+/*pushes and spaces labels*/
 #labels {
     padding-left: 150px;
     word-spacing: 100px;
 }
-
+/*allows for consistency in the menu on the products page*/
 #product_menu {
     font-size: x-large;
     display: inline-block;
@@ -110,11 +117,12 @@ button {
     text-align: left;
     padding-left: 50px;
 }
-
+/*italicizes link text when mouse hovers*/
 a:hover {
     font-style: italic;
 }
 
+/*places description against image*/
 #description {
     padding-top: 200px;
     padding-left: 100px;
