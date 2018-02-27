@@ -128,3 +128,8 @@ a:hover {
     padding-left: 100px;
     padding-right: 300px;
 }
+/*formats text on about page*/
+#about {
+    padding-left: 150px;
+    padding-right: 270px;
+}
