@@ -35,15 +35,15 @@ function generateRandomAnimal() {
   var randomIdx = getRandomIndex(animals.length);
   var randomAnimal = animals[randomIdx];
 
-  if (randomAnimal instanceof Cat) 
+  if (randomAnimal instanceof Cat)
   {
     return new Cat(generateRandomName(), generateRandomAge());
-  } 
-  else if (randomAnimal instanceof Dog) 
+  }
+  else if (randomAnimal instanceof Dog)
   {
     return new Dog(generateRandomName(), generateRandomAge());
-  } 
-  else if (randomAnimal instanceof Bird) 
+  }
+  else if (randomAnimal instanceof Bird)
   {
     return new Bird(generateRandomName(), generateRandomAge());
   }
@@ -65,9 +65,33 @@ function generateRandomAge() {
 $(document).ready(function() {
 
   // generate a random animal when the document opens
-  var animal = generateRandomAnimal();
+  var animal = JSON.parse(localStorage.getItem("savedAnimal"));
+
+  var hasSavedAnimal = false;
+
+  if (animal == null){
+    $("#button").text("Save Animal");
+    animal = generateRandomAnimal();
+  }
+  else {
+    $("#button").text("Clear Animal");
+    hasSavedAnimal = true;
+  }
   // update the page based on the animal properties
   $("#animal-properties").text(animal.name + "  " + animal.age + "years old");
   $("#animal-img").attr("src", animal.image);
+
+
+  $("#button").click(function(){
+    if (hasSavedAnimal){
+      localStorage.removeItem("savedAnimal");
+    }
+    else {
+      console.log("help");
+      localStorage.setItem("myAnimal", JSON.stringify(animal));
+      JSON.parse(localStorage.getItem("myAnimal"));
+    }
+
+  })
 
 });

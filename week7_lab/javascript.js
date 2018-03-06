@@ -63,5 +63,4 @@ $(document).ready(function() {
       var animal = generateRandomAnimal();
       $("#title").text(animal.name + " is " animal.age + " years old! ");
       $("#pictures").attr("src", animal.image);
-
 });
