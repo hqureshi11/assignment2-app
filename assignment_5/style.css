@@ -73,9 +73,10 @@ p {
 }
 
 #right_col2 {
-    padding-top:20px;
+    padding-top:170px;
     float:right;
     width:25%;
+    text-align: center;
 }
 
 /*aligns all images in a row*/
@@ -146,17 +147,17 @@ a:hover {
     padding-right: 270px;
 }
 
-#fullcart {
+table {
     padding-top: 20px;
     padding-left: 5%;
     padding-right: 15%;
     width: 100%
 }
 
-th {
-
+thead {
+    size: large;
 }
 
-tr {
-
+td {
+    text-align: center;
 }

@@ -2,8 +2,9 @@
 <html>
     <head>
         <!-- styles -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="main.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
-
         <title>Your Cart</title>
         <meta charset="UTF-8">
     </head>
@@ -15,30 +16,28 @@
                 <a href="home.html">Home</a> -
                 <a href="productpage.html">Products</a> -
                 <a href="about.html">About</a> -
-                <a href="cart.html">Cart</a> -
+                <a href="cart.html"><span id="cartNav">Cart</a> -
             </nav>
             <!--importing an image to allow for the use of the original logo-->
             <h1><a href=home.html><img src="logo.jpg" alt="Logo"></a></h1>
         </header>
 
-        <div id="left_col2">
-           <table id="fullcart">
-                <tr>
+    <div id="content">
+        <div id="bio">
+            <h2>Your Cart</h2>
+            <table>
+                <thead>
                     <th>Product</th>
-                    <th>Name</th>
+                    <th>Qty</th>
                     <th>Price</th>
-                </tr>
-                <tr>
-                    <td>
-                    </td>
-                </tr>
-           </table>
-        </div>
+                    <th>Remove</th>
+                </thead>
+                <tbody id="cartTable">
 
-        <div id="right_col2">
-            <button><a style= "text-decoration: none; color:white">Clear Cart</a></button>
-            <button><a style= "text-decoration: none; color:white">Proceed to Checkout</a></button>
+                </tbody>
+            </table>
+
         </div>
+    </div>
     </body>
-
 </html>

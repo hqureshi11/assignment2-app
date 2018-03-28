@@ -2,9 +2,9 @@
 <html>
     <head>
         <!-- source code -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="main.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!--page title-->
         <title>Wacky Walnut</title>
         <meta charset="UTF-8">
@@ -17,7 +17,7 @@
                 <a href="home.html">Home</a> -
                 <a href="productpage.html">Products</a> -
                 <a href="about.html">About</a> -
-                <a href="cart.html">Cart</a> -
+                <a href="cart.html"><span id="cartNav">Cart</a> -
             </nav>
             <!--importing an image to allow for the use of the original logo-->
             <h1><a href=home.html><img src="logo.jpg" alt="Logo"></a></h1>
@@ -40,21 +40,28 @@
                 <div id="description">
                     <p>A heavenly cinnamon bun chock-full of nuts, topped with Betty's special cream. With spirals of cinnamon and fig and a heap of glazed walnuts crowning the top, the Wacky Walnut was made to satisfy both a sophisticated palate and a child-like sweet tooth. Like all of our world-famous cinnamon buns, Wacky Walnut is best served warm. </p>
                     <h3>$6.99</h3>
-                    <p>Quantity</p>
-                    <div>
-                        <input id="qty-dropdown" type="number">
-                        <br>
+                <div>
+
+                <p>Quantity</p>
+                <select id="bunNum">
+                      <option type="number" value="1">1</option>
+                      <option type="number" value="3">3</option>
+                      <option type="number" value="6">6</option>
+                      <option type="number" value="12">12</option>
+                </select>
+                <div id="1" class="group">Just one? Order more!</div>
+                <div id="3" class="group">Now we're talking!</div>
+                <div id="6" class="group">Lookin' good!</div>
+                <div id="12" class="group">Need even more? Contact us for catering options!</div>
+
+                    <div id="glaze">
                     </div>
-                    <p>Glazing</p>
-                    <div>
-                        <select id="glz-dropdown">
-                            <option id="none" value="None">None</option>
-                            <option id="sugarmilk" value="Sugarmilk">Sugarmilk</option>
-                            <option id="vanilla" value="Vanilla">Vanilla</option>
-                            <option id="dchoc" value="Double Chocolate">Double Chocolate</option>
-                        </select><br><br>
-                    </div>
-                    <button onclick="addToCart()"><a style= "text-decoration: none; color:white">Add to Cart</a></button>
+
+                    <br>
+                    <br>
+                    <button><a style= "text-decoration: none; color:white" class="order" href="cart.html">Add to Cart</a></button>
+
+                </div>
                 </div>
             </div>
 
