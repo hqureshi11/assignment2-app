@@ -1,0 +1,151 @@
+link {
+    text-decoration: none;
+}
+
+/* Restrict Google Map to be responsive to screen size */
+#googleMap {
+    width: 50%;
+    float: left;
+}
+/* Create grey header */
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  padding-bottom: 10px;
+  box-shadow: 0px 10px 10px lightgrey;
+}
+
+/* Container fills entirety of screen */
+#container {
+  width: 100%;
+}
+
+/* All text on main section is on the left half */
+#first {
+  width: 50%;
+  float: left;
+  height: 100%;
+}
+
+/* The map only fills the right side */
+.second {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+/* Navigation buttons */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Verdana;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Logo */
+.header a.logo {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Trebuchet MS";
+  color: green;
+}
+
+/* Text below logo */
+.header p.logo-subtext {
+  font-size: 20px;
+  font-family: "Trebuchet MS";
+  color: black;
+  padding-left: 20px;
+}
+
+/* Hover options */
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active page on navigation bar */
+.header a.active {
+  background-color: green;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Paragraph options */
+p {
+  padding-left: 10px;
+  font-size: 15px;
+  font-family: "Trebuchet MS";
+  font-weight: bold;
+}
+
+/* Text options */
+#jstext {
+  text-transform: capitalize;
+  font-family: "Verdana";
+  padding-left: 30px;
+  font-size: 20px;
+  color: green;
+  font-weight: bold;
+}
+
+#jstext2 {
+  padding-left: 30px;
+  font-size: 15px;
+  font-family: "Trebuchet MS";
+  color: green;
+  font-weight: bold;
+}
+
+#jstext3 {
+  padding-left: 30px;
+  font-size: 15px;
+  font-family: "Trebuchet MS";
+  color: red;
+  font-weight: bold;
+}
+
+header2 {
+  padding-left: 50px;
+  font-size: 50px;
+  font-family: "Trebuchet MS";
+  color: darkgrey;
+  font-weight: bold;
+}
+
+.issue2 {
+  padding-left: 10%;
+  padding-right: 30%;
+  font-size: 15px;
+  font-family: "Trebuchet MS";
+  align-content: center;
+}
+
+/* Image options */
+img {
+    padding-left: 100px;
+    align-content: center;
+}
+
+/* Organizes page into row/column structure */
+#column {
+    float: left;
+    padding-left: 25px;
+    width: 50%;
+}
+
+#row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

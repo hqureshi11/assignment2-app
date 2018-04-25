@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- css + js, api's, and libraries -->
+        <link rel="stylesheet" type="text/css" href="Assets/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="Assets/jquery.fullPage.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="Assets/script.js" type="text/javascript"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery.easings.min.js"></script>
+        <script type="text/javascript" src="Assets/jquery.fullPage.js"></script>
+
+        <!-- loads fullpage.js -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage();
+            });
+        </script>
+
+        <title>One Park a Day</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <!-- creates header -->
+        <div class="header">
+            <a class="logo" href="home.html">One Park a Day</a>
+            <div class="header-right">
+                <a class="active" href="home.html">Home</a>
+            </div><br></br>
+            <p class="logo-subtext">a new park to see every day!</p>
+        </div>
+
+        <!-- entire site is contained within fullpage div -->
+        <div id="fullpage">
+            <!-- first "page" -->
+            <div class="section">
+                <div id=container>
+                    <!-- left side text -->
+                    <div id=first class=menu>
+                        <p>Today is...</p>
+                        <div id=jstext>
+                            <!-- pulls in the current date from the Javascript file -->
+                            <script language="javascript">
+                                document.write(currentDate);
+                            </script><br></br>
+                        </div>
+                        <p>You should visit...</p>
+                        <div id=jstext>
+                            <!-- pulls in the park name from the Javascript file -->
+                            <script language="javascript">
+                                document.write(currentPark.name);
+                            </script><br></br>
+                        </div>
+                        <p>in...</p>
+                        <!-- pulls in the park neighborhood from the Javascript file -->
+                        <div id=jstext>
+                            <script language="javascript">
+                                document.write(currentPark.neighborhood);
+                            </script><br></br>
+                        </div>
+                        <p>This park...</p>
+                        <!-- pulls in the park features from the Javascript file -->
+                        <div id=jstext2>
+                            ✓ - <script language="javascript">
+                                document.write(currentPark.feat1);
+                            </script>
+                        </div>
+                        <div id=jstext2>
+                            ✓ - <script language="javascript">
+                                document.write(currentPark.feat2);
+                            </script>
+                        </div>
+                        <div id=jstext3>
+                            × - <script language="javascript">
+                                document.write(currentPark.con1);
+                            </script>
+                        </div>
+                    </div>
+                    <!-- creates Google Map -->
+                    <div id="googleMap" class=second style="padding-top: 0px;width:50%;height:450px;float:right;"></div>
+                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATqrtrP9xHeO4LT7hG-AU93tTEgp1LZ3c&callback=myMap"></script>
+                </div>
+            </div>
+            <!-- second "page" -->
+            <div class="section" id="park-info">
+                <header2>
+                    <!-- pulls in the park from the Javascript file -->
+                    <script language="javascript">
+                        document.write(currentPark.name);
+                    </script>
+                </header2><br></br>
+                <div id="row">
+                    <div id="column">
+                        <!-- pulls in the current date from the Javascript file -->
+                        <img src="" id="imageBox"></img>
+                    </div>
+                    <div id="column">
+                        <!-- pulls in the info from the Javascript file to create
+                             a mad-lib style description -->
+                        <p class="issue2">
+                            <script language="javascript">document.write(currentPark.name);</script> is a park located in the <script language="javascript">document.write(currentPark.neighborhood);</script> section of Pittsburgh. Like all neighborhoods in Pittsburgh, <script language="javascript">document.write(currentPark.neighborhood);</script> is teaming with activities, and <script language="javascript">document.write(currentPark.name);</script> serves as the epicenter of all the activity in the area. A great destination for Pittsburghers, <script language="javascript">document.write(currentPark.name);</script> is great because it <script language="javascript">document.write(currentPark.feat1);</script> and <script language="javascript">document.write(currentPark.feat2);</script>. However, be mindful of the fact that <script language="javascript">document.write(currentPark.name);</script> <script language="javascript">document.write(currentPark.con1);</script>. Regardless, the best way to learn more about <script language="javascript">document.write(currentPark.name);</script> is to pay it a visit yourself!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- third "page" -->
+            <div class="section">
+                <!-- iframe code for storymap.js implementation -->
+                <iframe src="https://uploads.knightlab.com/storymapjs/621be5d8fc3e50b803b8985c93f8df36/one-park-a-day/index.html" frameborder="0" width="100%" height="100%"></iframe>
+            </div>
+            <!-- fourth "page" -->
+            <div class="section">
+                <header2>
+                    About
+                </header2><br></br>
+                <p class="issue2">
+                    ONE PARK A DAY is an initiative that allows users to find and learn
+                about parks in their area. Each day presents a different city park in Pittsburgh. With this website, users the opportunity to learn about and visit a new park. ONE PARK A DAY also helps users learn more about the history and activities available in Pittsburgh's beautiful parks. Check back every day to find a new park to visit!
+                Coming soon: ONE PARK A DAY in New York, San Francisco, and Boston!
+                </p><br></br>
+                <div id="row">
+                    <div id="column">
+                        <img src="https://i.imgur.com/gMzH0fT.jpg">
+                    </div>
+                    <div id="column">
+                        <img src="https://i.imgur.com/whwyBXt.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
